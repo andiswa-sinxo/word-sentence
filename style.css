@@ -29,6 +29,12 @@ p{
     font-size: 15px;
 }
 
+.check label{
+    font-size: 18px;
+}
+.hide{
+    padding:9px 60px ;
+}
 .text{
     padding: 12px 60px;
     background-color: transparent;
