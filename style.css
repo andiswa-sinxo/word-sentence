@@ -35,6 +35,9 @@ p{
 .hide{
     padding:9px 60px ;
 }
+.check{
+    margin-bottom: 10px;
+}
 .text{
     padding: 12px 60px;
     background-color: transparent;
