@@ -2,7 +2,7 @@ const word = document.querySelector(".text")
 const btn = document.querySelector(".button")
 const display = document.querySelector(".display")
 const length = document.querySelector(".displayLength")
-// const wordsMoreThanFour = []
+const hideElem = document.querySelector(".hide")
 
 const wordBtnClicked = () => {
 

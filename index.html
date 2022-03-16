@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Word Sentence</h1>
@@ -14,10 +16,14 @@
         <p>Enter a sentence of 5 words or more</p>
 
         <div class="input">
-            <label for="">Sentence:</label>
+            <label for="text">Sentence:</label>
             <input class="text" type="text">
-    
-            <button type="submit" class="button">Enter</button>
+
+            <button type="submit" class="button">Analyze</button>
+        </div>
+        <div>
+            <label for="hide">Hide words:</label>
+            <input type="checkbox" class="hide">
         </div>
 
         <div class="display"></div>
@@ -25,4 +31,5 @@
     </div>
 </body>
 <script src="./word.js"></script>
+
 </html>

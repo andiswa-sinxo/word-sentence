@@ -37,13 +37,14 @@ p{
 .button{
     margin-bottom: 50px;
     height: 40px;
-    width: 10%;
+    width: 13%;
     margin-left: 20px;
     background-color: transparent;
 }
 
 .button:hover{
     background-color: #9E9885;
+    
 }
 mark{
     background: #9E9885;
