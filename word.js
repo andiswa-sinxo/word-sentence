@@ -84,7 +84,7 @@ let WordLong = []
         
         
     }
-    long.innerHTML= longWord;
+    // long.innerHTML= longWord;
     long.innerHTML = `The longest word in the sentence is <mark class= "gg">${WordLong}</mark> `
 }
 
