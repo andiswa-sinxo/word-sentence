@@ -78,7 +78,6 @@ let WordLong = []
     for (let i = 0; i < split.length; i++) {
         const elem = split[i];
         if(elem.length == anotherLongWord.length){
-            // anotherLongWord +=elem 
                 WordLong.push(elem)
                 
         }
