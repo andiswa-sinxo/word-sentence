@@ -59,22 +59,34 @@ const longestWord = () => {
     const wordSentence = word.value
     const split = wordSentence.split(" ");
     let longWord = "" 
+    let anotherLongWord = ""
 
     for (let i = 0; i < split.length; i++) {
-       // const elem = split[i];
-        if ((checkbox.checked === true) && (arrWord.length < split[i].length)) {
-            console.log(arrWord.length < split[i].length);
+       const elem = split[i];
+        if ((checkbox.checked === true) && (arrWord.length <= elem.length)) {
+            console.log(arrWord.length < elem.length);
             arrWord = split[i]
+            anotherLongWord = elem
             longWord += `<mark class= "gg">${arrWord}</mark>`
                 console.log(arrWord);
         } else {
             longWord += ""
         }
-        long.innerHTML= longWord;
-        long.innerHTML = `The longest word in the sentence is <mark class= "gg">${arrWord}</mark>`
+        
     }
-    
-    
+let WordLong = []
+    for (let i = 0; i < split.length; i++) {
+        const elem = split[i];
+        if(elem.length == anotherLongWord.length){
+            // anotherLongWord +=elem 
+                WordLong.push(elem)
+                
+        }
+        
+        
+    }
+    long.innerHTML= longWord;
+    long.innerHTML = `The longest word in the sentence is <mark class= "gg">${WordLong}</mark> `
 }
 
 
