@@ -3,18 +3,29 @@ const btn = document.querySelector(".button")
 const display = document.querySelector(".display")
 const length = document.querySelector(".displayLength")
 const checkbox = document.querySelector(".hide")
+const long = document.querySelector(".displayWord")
 
+/***
+ * split your string - array : ['i', 'like', 'codeing']
+ * get long word
+ * loop through your list
+ * element === longWord
+ * mark longword with diff color
+ */
 const wordBtnClicked = () => {
 
     const wordSentence = word.value
     const splitWord = wordSentence.split(" ");
     let wordsMoreThanFour = ""
+    //let long = ""
     for (let i = 0; i < splitWord.length; i++) {
         const element = splitWord[i];
         if (element.length > 4) {
+            // if element === longWord
             wordsMoreThanFour += `<mark>${element}</mark> `
-        } else {
+        }else {
             wordsMoreThanFour += `${element} `
+            
         }
 
     }
@@ -31,6 +42,7 @@ const hideWords = () => {
     const wordSentence = word.value
     const split = wordSentence.split(" ");
     let notHiddenWords = ""
+    
     for (let i = 0; i < split.length; i++) {
         const elem = split[i];
         if ((checkbox.checked === true) && (split[i].length >= 5)) {
@@ -42,8 +54,35 @@ const hideWords = () => {
     }
     
 }
+const longestWord = () => {
+    let arrWord = [0];
+    const wordSentence = word.value
+    const split = wordSentence.split(" ");
+    let longWord = "" 
+
+    for (let i = 0; i < split.length; i++) {
+       // const elem = split[i];
+        if ((checkbox.checked === true) && (arrWord.length < split[i].length)) {
+            console.log(arrWord.length < split[i].length);
+            arrWord = split[i]
+            longWord += `<mark class= "gg">${arrWord}</mark>`
+                console.log(arrWord);
+        } else {
+            longWord += ""
+        }
+        long.innerHTML= longWord;
+        long.innerHTML = `The longest word in the sentence is <mark class= "gg">${arrWord}</mark>`
+    }
+    
+    
+}
+
 
     
     btn.addEventListener('click', wordBtnClicked)
-    checkbox.addEventListener("click", hideWords)
+    checkbox.addEventListener("click", function(){
+        hideWords();
+        longestWord();
+    })
+    
     

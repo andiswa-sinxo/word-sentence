@@ -32,6 +32,9 @@ p{
 .check label{
     font-size: 18px;
 }
+.color{
+    background-color: aqua;
+}
 .hide{
     padding:9px 60px ;
 }
@@ -65,4 +68,8 @@ mark{
 .displayLength{
     font-size: 20px;
     margin-top: 20px;
+}
+
+.gg{
+    background-color: aqua;
 }
