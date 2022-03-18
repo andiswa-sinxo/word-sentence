@@ -5,13 +5,7 @@ const length = document.querySelector(".displayLength")
 const checkbox = document.querySelector(".hide")
 const long = document.querySelector(".displayWord")
 
-/***
- * split your string - array : ['i', 'like', 'codeing']
- * get long word
- * loop through your list
- * element === longWord
- * mark longword with diff color
- */
+
 const wordBtnClicked = () => {
 
     const wordSentence = word.value

@@ -7,8 +7,8 @@ body{
     border-style: outset;
     text-align: center;
     width: 600px;
-    height: 400px;
-    margin-left: 370px;
+    height: 500px;
+    margin-left: 350px;
     /* margin-top: 100px; */
 }
 
@@ -43,7 +43,7 @@ p{
 }
 .text{
     padding: 12px 60px;
-    background-color: transparent;
+    background-color: #9E9885;
 }
 
 .button{
@@ -58,6 +58,17 @@ p{
     background-color: #9E9885;
     
 }
+textarea {
+    width: 70%;
+    height: 70px;
+    padding: 10px 18px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    
+    font-size: 16px;
+    resize: none;
+  }
 mark{
     background: #9E9885;
 }
