@@ -45,9 +45,14 @@ const hideWords = () => {
     
     for (let i = 0; i < split.length; i++) {
         const elem = split[i];
+        if ((checkbox.checked === false) && (split[i].length >= 5)) {
+            notHiddenWords += `<mark>${elem}</mark> `
+        }else if((checkbox.checked === false) && (split[i].length < 5)){
+            notHiddenWords += `${elem} `
+        }
         if ((checkbox.checked === true) && (split[i].length >= 5)) {
             notHiddenWords += `<mark>${elem}</mark> `
-        } else {
+        }else {
             notHiddenWords += ""
         }
             display.innerHTML = notHiddenWords
@@ -67,7 +72,7 @@ const longestWord = () => {
             console.log(arrWord.length < elem.length);
             arrWord = split[i]
             anotherLongWord = elem
-            longWord += `<mark class= "gg">${arrWord}</mark>`
+            longWord += `<mark class= "gg">${arrWord}</mark> `
                 console.log(arrWord);
         } else {
             longWord += ""
@@ -85,7 +90,7 @@ let WordLong = []
         
     }
     long.innerHTML= longWord;
-    long.innerHTML = `The longest word in the sentence is <mark class= "gg">${WordLong}</mark> `
+    long.innerHTML = `<mark class= "gg">${WordLong}</mark> `
 }
 
 
