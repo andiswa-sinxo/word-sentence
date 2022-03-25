@@ -5,6 +5,12 @@ const length = document.querySelector(".displayLength")
 const checkbox = document.querySelector(".hide")
 const long = document.querySelector(".displayWord")
 
+
+
+// let theWordSentence = [];
+// if (localStorage["sentences"]) {
+//     theWordSentence = JSON.parse(localStorage.getItem("sentences"));
+// }
 const wordWidget = countingWords()
 
 const wordBtnClicked = () => {
@@ -29,6 +35,8 @@ btn.addEventListener('click', function () {
     const x = wordWidget.getLongestWord(word.value);
     console.log(x);
     wordBtnClicked()
+
+    // localStorage.setItem('sentences', JSON.stringify(wordWidget.getLongestWord()))
     
 
 })

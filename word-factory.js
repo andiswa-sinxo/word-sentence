@@ -41,7 +41,7 @@ const countingWords = () => {
         let longWord = '';
         const longWords = []
 
-        const words = sentence.split(' ');
+        const words = sentence.split(" ");
 
         words.map(word => {
             if (word.length >= longWord.length) {
