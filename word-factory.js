@@ -11,13 +11,12 @@ const countingWords = () => {
     }
 
     const WordsLongerThanFive = (sentence) => {
-
         let high = highLight(sentence);
-
         return high;
     }
 
     const highLight = (sentence) => {
+        console.log(sentence);
         const splitWord = sentence.split(" ");
 
         let wordsMoreThanFour = ""
@@ -66,12 +65,12 @@ const countingWords = () => {
         for (let i = 0; i < split.length; i++) {
             const elem = split[i];
             if ((checkbox.checked === false) && (split[i].length >= 5)) {
-                notHiddenWords += `<mark>${elem}</mark> `
+                notHiddenWords += `${elem} `
             } else if ((checkbox.checked === false) && (split[i].length < 5)) {
                 notHiddenWords += `${elem} `
             }
             if ((checkbox.checked === true) && (split[i].length >= 5)) {
-                notHiddenWords += `<mark>${elem}</mark> `
+                notHiddenWords += `${elem} `
             } else {
                 notHiddenWords += ""
             }
