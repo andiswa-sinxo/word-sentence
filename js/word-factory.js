@@ -48,10 +48,10 @@ const countingWords = (theWordSentence) => {
 
     }
 
-    const getAllSentences = () => {
-        return getSentence
+    // const getAllSentences = () => {
+    //     return getSentence
         
-    }
+    // }
 
     const getLongestWord = (sentence) => {
         let longWord = '';
@@ -102,6 +102,6 @@ const countingWords = (theWordSentence) => {
         checkWord,
         highLight,
         setSentences,
-        getAllSentences
+        // getAllSentences
     }
 }
