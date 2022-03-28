@@ -31,13 +31,23 @@ describe("Words Widget", () => {
 });
 
 describe("Highlight words", () => {
-    it("Should highlight a word with 5 characters", () => {
+    it("Should get the word(s) with 5 or more characters in a sentence", () => {
        
         const WordCount = countingWords()
 
-         WordCount.wordLength("The cat is playing alone")
+       let longWord =  WordCount.getLongestWord("The cat is playing alone")
    
-        assert.deepEqual("playing", WordCount.highLight())
+        assert.deepEqual(["playing"], longWord)
+        
+    });
+    it("Should highlight the longest word(s)", () => {
+       
+        const WordCount = countingWords()
+        let str = "The cat is playing alone in the backyard"
+    //    let longWord =  WordCount.getLongestWord("The cat is playing alone in the backyard")
+    let longWords = WordCount.WordsLongerThanFive("The cat is playing alone in the backyard")
+   
+        assert.deepEqual(["backyard"], longWords)
         
     });
 });

@@ -1,5 +1,6 @@
-const countingWords = () => {
+const countingWords = (theWordSentence) => {
 
+    let getSentence = theWordSentence || [];
 
     const wordLength = (word) => {
         let domLength = "";
@@ -16,7 +17,6 @@ const countingWords = () => {
     }
 
     const highLight = (sentence) => {
-        console.log(sentence);
         const splitWord = sentence.split(" ");
 
         let wordsMoreThanFour = ""
@@ -35,6 +35,20 @@ const countingWords = () => {
             }
         }
         return wordsMoreThanFour;
+    }
+
+    const setSentences = (characters) => {
+        if (!getSentence.includes(characters) && characters != '') {
+            getSentence.push(characters)
+        } else {
+            return 
+        }
+
+    }
+
+    const getAllSentences = () => {
+        return getSentence
+        
     }
 
     const getLongestWord = (sentence) => {
@@ -84,6 +98,8 @@ const countingWords = () => {
         getLongestWord,
         wordLength,
         checkWord,
-        highLight
+        highLight,
+        setSentences,
+        getAllSentences
     }
 }
