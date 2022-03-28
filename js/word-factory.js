@@ -38,10 +38,12 @@ const countingWords = (theWordSentence) => {
     }
 
     const setSentences = (characters) => {
-        if (!getSentence.includes(characters) && characters != '') {
+        console.log(getSentence);
+        if (!getSentence.includes(characters)) {
             getSentence.push(characters)
+            return getSentence
         } else {
-            return 
+            return getSentence
         }
 
     }
