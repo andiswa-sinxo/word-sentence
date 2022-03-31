@@ -1,6 +1,6 @@
-const countingWords = () => {
+const countingWords = (theWordSentence) => {
 
-    // let getSentence = theWordSentence || [];
+    let getSentence = theWordSentence || [];
 
     const wordLength = (word) => {
         let domLength = "";
@@ -37,16 +37,16 @@ const countingWords = () => {
         return wordsMoreThanFour;
     }
 
-    // const setSentences = (characters) => {
-    //     console.log(getSentence);
-    //     if (!getSentence.includes(characters)) {
-    //         getSentence.push(characters)
-    //         return getSentence
-    //     } else {
-    //         return getSentence
-    //     }
+    const setSentences = (characters) => {
+        console.log(getSentence);
+        if (!getSentence.includes(characters)) {
+            getSentence.push(characters)
+            return getSentence
+        } else {
+            return getSentence
+        }
 
-    // }
+    }
 
     // const getAllSentences = () => {
     //     return getSentence
@@ -101,7 +101,7 @@ const countingWords = () => {
         wordLength,
         checkWord,
         highLight,
-       
-        // getAllSentences
+        setSentences
+        
     }
 }
