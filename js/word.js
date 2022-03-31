@@ -7,12 +7,12 @@ const long = document.querySelector(".displayWord")
 
 
 
-let theWordSentence = [];
+// let theWordSentence = [];
 
-if(localStorage["sentences"]) {
-    theWordSentence = JSON.parse(localStorage.getItem("sentences"));
-}
-const wordWidget = countingWords(theWordSentence)
+// if(localStorage["sentences"]) {
+//     theWordSentence = JSON.parse(localStorage.getItem("sentences"));
+// }
+const wordWidget = countingWords()
 
 const wordBtnClicked = () => {
 
@@ -38,8 +38,8 @@ btn.addEventListener('click', function () {
     console.log(x);
     wordBtnClicked()
 
-    localStorage.setItem('sentences', JSON.stringify(wordWidget.setSentences()))
-    console.log(wordWidget.setSentences());
+    // localStorage.setItem('sentences', JSON.stringify(wordWidget.setSentences(word.value)))
+    // console.log(wordWidget.setSentences());
     
 
 })
