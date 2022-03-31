@@ -101,7 +101,7 @@ const countingWords = () => {
         wordLength,
         checkWord,
         highLight,
-        setSentences,
+       
         // getAllSentences
     }
 }
